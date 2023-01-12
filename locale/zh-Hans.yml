@@ -1,0 +1,14 @@
+ziven-money-leaderboard:
+  forum:
+    leaderboard-name: 社区资金排行榜
+    leaderboard-list-title: 资金排行榜
+    leaderboard-list-rank: 排名
+    leaderboard-list-user: 用户
+    leaderboard-list-money: 拥有资金
+  admin:
+    settings:
+      leaderboard-icon: 排行榜图标
+      leaderboard-icon-help: 输入任意一个 Font Awesome 图标名称，包括前缀。
+      leaderboard-entry-position: 排行榜入口位置
+      leaderboard-entry-sideNav: 左侧导航菜单
+      leaderboard-entry-topRightMenu: 右上角菜单

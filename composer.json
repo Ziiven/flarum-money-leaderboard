@@ -1,0 +1,36 @@
+{
+    "name": "ziiven/flarum-money-leaderboard",
+    "description": "A Flarum extension. Add money leaderboard to the forum.",
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.0",
+        "antoinefr/flarum-ext-money": "*"
+    },
+    "support": {
+        "issues": "https://github.com/Ziiven/flarum-money-leaderboard/issues",
+        "source": "https://github.com/Ziiven/flarum-money-leaderboard"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Ziven\\MoneyLeaderboard\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ziven"
+        }
+    ],
+    "extra": {
+        "flarum-extension": {
+            "title": "Ziven Money Leaderboard",
+            "icon": {
+                "name": "fas fa-sort-amount-up",
+                "backgroundColor": "#68238c",
+                "color": "#fff"
+            }
+        }
+    }
+}
