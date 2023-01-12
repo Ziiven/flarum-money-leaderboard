@@ -28,7 +28,7 @@
             "title": "Ziven Money Leaderboard",
             "icon": {
                 "name": "fas fa-sort-amount-up",
-                "backgroundColor": "#68238c",
+                "backgroundColor": "#238c59",
                 "color": "#fff"
             }
         }
