@@ -5,6 +5,7 @@ ziven-money-leaderboard:
     leaderboard-list-rank: 排名
     leaderboard-list-user: 用户
     leaderboard-list-money: 拥有资金
+    leaderboard-load-more: 读取更多
   admin:
     settings:
       leaderboard-icon: 排行榜图标

@@ -45,7 +45,7 @@ export default class MoneyLeaderboardList extends Page {
               {this.hasMoreResults() && (
                 <div style="text-align:center;padding:20px">
                   <Button className={'Button Button--primary'} disabled={this.loading} loading={this.loading} onclick={() => this.loadMore()}>
-                    {app.translator.trans('ziven-transfer-money.forum.transfer-list-load-more')}
+                    {app.translator.trans('ziven-money-leaderboard.forum.leaderboard-load-more')}
                   </Button>
                 </div>
               )}

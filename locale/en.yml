@@ -5,6 +5,7 @@ ziven-money-leaderboard:
     leaderboard-list-rank: Rank
     leaderboard-list-user: User
     leaderboard-list-money: Money Owned
+    leaderboard-load-more: Load More
   admin:
     settings:
       leaderboard-icon: Leaderboard icon
