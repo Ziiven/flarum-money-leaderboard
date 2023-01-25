@@ -17,6 +17,14 @@ export default class MoneyLeaderboardIndexPage extends Page {
     this.loadResults();
   }
 
+  oncreate(vnode) {
+    super.oncreate(vnode);
+    const titleText = app.translator.trans("ziven-money-leaderboard.forum.leaderboard-list-title");
+    app.setTitle(titleText);
+    app.setTitleCount(0);
+    $(".item-nav button .Button-label").text(titleText);
+  }
+
   view() {
     let loading;
     let rankID = 0;
@@ -26,7 +34,7 @@ export default class MoneyLeaderboardIndexPage extends Page {
     }
 
     return (
-      <div className="IndexPage">
+      <div className="MoneyLeaderboardPage">
         {IndexPage.prototype.hero()}
 
         <div className="container">
@@ -94,7 +102,7 @@ export default class MoneyLeaderboardIndexPage extends Page {
     [].push.apply(this.moneyLeaderboardList, results);
     this.loading = false;
     m.redraw();
-
+    
     return results;
   }
 

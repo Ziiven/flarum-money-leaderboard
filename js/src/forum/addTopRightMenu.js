@@ -17,6 +17,7 @@ export default function () {
         }}
         icon={moneyLeaderBoardIcon}
       >
+        {app.translator.trans('ziven-money-leaderboard.forum.leaderboard-name')}
       </Button>,
       15
     );
