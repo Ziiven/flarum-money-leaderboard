@@ -21,22 +21,26 @@ class ListMoneyLeaderboardController extends AbstractListController{
         $params = $request->getQueryParams();
         $limit = $this->extractLimit($request);
         $offset = $this->extractOffset($request);
+        $actor = $request->getAttribute('actor');
+        $allowViewLeaderBoard = $request->getAttribute('actor')->can('moneyLeaderboard.allowViewLeaderbaord');
 
-        $moneyLeaderboardResult = User::skip($offset)->take($limit + 1)->orderBy('money', 'desc')->get();
-        $hasMoreResults = $limit > 0 && $moneyLeaderboardResult->count() > $limit;
+        if($allowViewLeaderBoard){
+            $moneyLeaderboardResult = User::skip($offset)->take($limit + 1)->orderBy('money', 'desc')->get();
+            $hasMoreResults = $limit > 0 && $moneyLeaderboardResult->count() > $limit;
 
-        if($hasMoreResults){
-            $moneyLeaderboardResult->pop();
+            if($hasMoreResults){
+                $moneyLeaderboardResult->pop();
+            }
+
+            $document->addPaginationLinks(
+                $this->url->to('api')->route('moneyLeaderboard.get'),
+                $params,
+                $offset,
+                $limit,
+                $hasMoreResults?null:0
+            );
+
+            return $moneyLeaderboardResult;
         }
-
-        $document->addPaginationLinks(
-            $this->url->to('api')->route('moneyLeaderboard.get'),
-            $params,
-            $offset,
-            $limit,
-            $hasMoreResults?null:0
-        );
-
-        return $moneyLeaderboardResult;
     }
 }

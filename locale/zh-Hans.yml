@@ -7,9 +7,14 @@ ziven-money-leaderboard:
     leaderboard-list-money: 拥有资金
     leaderboard-load-more: 读取更多
   admin:
+    permission:
+      allow_view_leaderboard: 允许浏览资金排行榜
     settings:
       leaderboard-icon: 排行榜图标
       leaderboard-icon-help: 输入任意一个 Font Awesome 图标名称，包括前缀。
       leaderboard-entry-position: 排行榜入口位置
       leaderboard-entry-sideNav: 左侧导航菜单
       leaderboard-entry-topRightMenu: 右上角菜单
+      leaderboard-max-load-count: 数据最多展示数量
+      leaderboard-init-load-count: 初始数据的展示数量
+      leaderboard-load-more-count: 读取更多的数据的展示数量

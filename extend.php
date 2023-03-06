@@ -1,6 +1,7 @@
 <?php
 
 use Flarum\Extend;
+use Flarum\Api\Serializer\ForumSerializer;
 use Ziven\MoneyLeaderboard\Controllers\MoneyLeaderboardController;
 use Ziven\MoneyLeaderboard\Controllers\ListMoneyLeaderboardController;
 
@@ -11,12 +12,20 @@ $extend = [
 
     (new Extend\Locales(__DIR__ . '/locale')),
 
+    (new Extend\ApiSerializer(ForumSerializer::class))
+        ->attribute('allowViewLeaderbaord', function (ForumSerializer $serializer) {
+            return $serializer->getActor()->hasPermission("moneyLeaderboard.allowViewLeaderbaord");
+        }),
+
     (new Extend\Routes('api'))
         ->get('/moneyLeaderboard', 'moneyLeaderboard.get', ListMoneyLeaderboardController::class),
 
     (new Extend\Settings())
         ->serializeToForum('moneyLeaderBoardIcon', 'ziven-money-leaderboard.moneyLeaderBoardIcon')
-        ->serializeToForum('moneyLeaderBoardEntryPosition', 'ziven-money-leaderboard.moneyLeaderBoardEntryPosition'),
+        ->serializeToForum('moneyLeaderBoardEntryPosition', 'ziven-money-leaderboard.moneyLeaderBoardEntryPosition')
+        ->serializeToForum('leaderboardMaxLoadCount', 'ziven-money-leaderboard.leaderboardMaxLoadCount','intval')
+        ->serializeToForum('leaderboardInitLoadCount', 'ziven-money-leaderboard.leaderboardInitLoadCount','intval')
+        ->serializeToForum('leaderboardLoadMoreCount', 'ziven-money-leaderboard.leaderboardLoadMoreCount','intval'),
 ];
 
 return $extend;

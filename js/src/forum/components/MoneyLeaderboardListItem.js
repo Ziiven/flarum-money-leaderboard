@@ -22,6 +22,13 @@ export default class MoneyLeaderboardListItem extends Component {
       rankClass = "MoneyLeaderboardListItemRankLower";
     }
 
+    let avatarWithFrame,usernameWithColor;
+    if('ziiven-decoration-store' in flarum.extensions){
+      const { components } = require('@ziiven-decoration-store');
+      avatarWithFrame = components.avatarWithFrame;
+      usernameWithColor = components.usernameWithColor;
+    }
+
     return (
       <div className="MoneyLeaderboardListItemContainer">
         <div class="MoneyLeaderboardListHeaderRank">
@@ -32,7 +39,7 @@ export default class MoneyLeaderboardListItem extends Component {
         </div>
         <div class="MoneyLeaderboardListHeaderUser">
           <Link href={app.route.user(leaderboardListItem)} className="transferHistoryUser" style="color:var(--heading-color)">
-            {avatar(leaderboardListItem)} {username(leaderboardListItem)}
+            {avatarWithFrame?avatarWithFrame(leaderboardListItem):avatar(leaderboardListItem)} {usernameWithColor?usernameWithColor(leaderboardListItem):username(leaderboardListItem)}
           </Link>
         </div>
         <div class="MoneyLeaderboardListHeaderMoney">

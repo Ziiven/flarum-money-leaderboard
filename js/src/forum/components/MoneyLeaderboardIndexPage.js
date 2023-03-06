@@ -13,8 +13,11 @@ export default class MoneyLeaderboardIndexPage extends Page {
     this.moreResults = false;
     this.moneyLeaderboardList = [];
     this.totalLoadCount = 0;
-    this.maxLoadCount = 50;
-    this.loadResults();
+
+    this.maxLoadCount = app.forum.attribute("leaderboardMaxLoadCount") || 50;
+    this.initloadCount = app.forum.attribute("leaderboardInitLoadCount") || 20;
+    this.loadMoreCount = app.forum.attribute("leaderboardLoadMoreCount") || 10;
+    this.loadResults(0,this.initloadCount);
   }
 
   oncreate(vnode) {
@@ -94,7 +97,7 @@ export default class MoneyLeaderboardIndexPage extends Page {
 
   loadMore() {
     this.loading = true;
-    this.loadResults(this.moneyLeaderboardList.length,10);
+    this.loadResults(this.moneyLeaderboardList.length,this.loadMoreCount);
   }
 
   parseResults(results) {
