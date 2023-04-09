@@ -19,6 +19,11 @@ app.initializers.add('ziven-money-leaderboard', () => {
       },
     })
     .registerSetting({
+      setting: 'ziven-money-leaderboard.moneyLeaderBoardHideMoneyText',
+      label: app.translator.trans('ziven-money-leaderboard.admin.settings.leaderboard-hide-money-text'),
+      type: 'boolean',
+    })
+    .registerSetting({
       setting: 'ziven-money-leaderboard.moneyLeaderBoardAdditionalInfo',
       label: app.translator.trans('ziven-money-leaderboard.admin.settings.leaderboard-additional-info'),
       help: app.translator.trans('ziven-money-leaderboard.admin.settings.leaderboard-additional-info-help'),

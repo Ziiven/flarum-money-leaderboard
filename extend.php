@@ -24,6 +24,7 @@ $extend = [
         ->serializeToForum('moneyLeaderBoardIcon', 'ziven-money-leaderboard.moneyLeaderBoardIcon')
         ->serializeToForum('moneyLeaderBoardEntryPosition', 'ziven-money-leaderboard.moneyLeaderBoardEntryPosition')
         ->serializeToForum('moneyLeaderBoardAdditionalInfo', 'ziven-money-leaderboard.moneyLeaderBoardAdditionalInfo')
+        ->serializeToForum('moneyLeaderBoardHideMoneyText', 'ziven-money-leaderboard.moneyLeaderBoardHideMoneyText')
         ->serializeToForum('leaderboardMaxLoadCount', 'ziven-money-leaderboard.leaderboardMaxLoadCount', 'intval')
         ->serializeToForum('leaderboardInitLoadCount', 'ziven-money-leaderboard.leaderboardInitLoadCount', 'intval')
         ->serializeToForum('leaderboardLoadMoreCount', 'ziven-money-leaderboard.leaderboardLoadMoreCount', 'intval'),
