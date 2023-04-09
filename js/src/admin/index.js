@@ -19,6 +19,17 @@ app.initializers.add('ziven-money-leaderboard', () => {
       },
     })
     .registerSetting({
+      setting: 'ziven-money-leaderboard.moneyLeaderBoardAdditionalInfo',
+      label: app.translator.trans('ziven-money-leaderboard.admin.settings.leaderboard-additional-info'),
+      help: app.translator.trans('ziven-money-leaderboard.admin.settings.leaderboard-additional-info-help'),
+      type: 'string',
+    })
+    .registerSetting({
+      setting: 'ziven-money-leaderboard.moneyLeaderBoardSlug',
+      label: app.translator.trans('ziven-money-leaderboard.admin.settings.leaderboard-slug'),
+      type: 'string',
+    })
+    .registerSetting({
       setting: 'ziven-money-leaderboard.leaderboardMaxLoadCount',
       label: app.translator.trans('ziven-money-leaderboard.admin.settings.leaderboard-max-load-count'),
       placeholder:50,

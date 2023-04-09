@@ -18,14 +18,15 @@ $extend = [
         }),
 
     (new Extend\Routes('api'))
-        ->get('/moneyLeaderboard', 'moneyLeaderboard.get', ListMoneyLeaderboardController::class),
+        ->get('/moneyLeaderboard', 'moneyLeaderboard.get', ListMoneyLeaderboardController::class), // TODO: Read setting to use custom slug
 
     (new Extend\Settings())
         ->serializeToForum('moneyLeaderBoardIcon', 'ziven-money-leaderboard.moneyLeaderBoardIcon')
         ->serializeToForum('moneyLeaderBoardEntryPosition', 'ziven-money-leaderboard.moneyLeaderBoardEntryPosition')
-        ->serializeToForum('leaderboardMaxLoadCount', 'ziven-money-leaderboard.leaderboardMaxLoadCount','intval')
-        ->serializeToForum('leaderboardInitLoadCount', 'ziven-money-leaderboard.leaderboardInitLoadCount','intval')
-        ->serializeToForum('leaderboardLoadMoreCount', 'ziven-money-leaderboard.leaderboardLoadMoreCount','intval'),
+        ->serializeToForum('moneyLeaderBoardAdditionalInfo', 'ziven-money-leaderboard.moneyLeaderBoardAdditionalInfo')
+        ->serializeToForum('leaderboardMaxLoadCount', 'ziven-money-leaderboard.leaderboardMaxLoadCount', 'intval')
+        ->serializeToForum('leaderboardInitLoadCount', 'ziven-money-leaderboard.leaderboardInitLoadCount', 'intval')
+        ->serializeToForum('leaderboardLoadMoreCount', 'ziven-money-leaderboard.leaderboardLoadMoreCount', 'intval'),
 ];
 
 return $extend;
