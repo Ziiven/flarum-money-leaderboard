@@ -39,7 +39,7 @@ export default class MoneyLeaderboardListItem extends Component {
         </div>
         <div class="MoneyLeaderboardListHeaderUser">
           <Link href={app.route.user(leaderboardListItem)} className="transferHistoryUser" style="color:var(--heading-color)">
-            {avatarWithFrame?avatarWithFrame(leaderboardListItem):avatar(leaderboardListItem)} {usernameWithColor?usernameWithColor(leaderboardListItem):username(leaderboardListItem)}
+            {avatarWithFrame?avatarWithFrame(leaderboardListItem):avatar(leaderboardListItem)}{usernameWithColor?usernameWithColor(leaderboardListItem):username(leaderboardListItem)}
           </Link>
         </div>
         <div class="MoneyLeaderboardListHeaderMoney">
