@@ -30,12 +30,6 @@ app.initializers.add('ziven-money-leaderboard', () => {
       type: 'string',
     })
     .registerSetting({
-      setting: 'ziven-money-leaderboard.moneyLeaderBoardSlug',
-      label: app.translator.trans('ziven-money-leaderboard.admin.settings.leaderboard-slug'),
-      placeholder:'/moneyLeaderboard',
-      type: 'string',
-    })
-    .registerSetting({
       setting: 'ziven-money-leaderboard.leaderboardMaxLoadCount',
       label: app.translator.trans('ziven-money-leaderboard.admin.settings.leaderboard-max-load-count'),
       placeholder:50,

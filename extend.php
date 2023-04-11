@@ -18,7 +18,7 @@ $extend = [
         }),
 
     (new Extend\Routes('api'))
-        ->get('/moneyLeaderboard', 'moneyLeaderboard.get', ListMoneyLeaderboardController::class), // TODO: Read setting to use custom slug
+        ->get('/moneyLeaderboard', 'moneyLeaderboard.get', ListMoneyLeaderboardController::class),
 
     (new Extend\Settings())
         ->serializeToForum('moneyLeaderBoardIcon', 'ziven-money-leaderboard.moneyLeaderBoardIcon')

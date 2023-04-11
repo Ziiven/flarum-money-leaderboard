@@ -15,7 +15,6 @@ export default class MoneyLeaderboardIndexPage extends Page {
     this.totalLoadCount = 0;
 
     this.additionalInfo = app.forum.attribute("moneyLeaderBoardAdditionalInfo");
-    this.slug = app.forum.attribute("leaderboardSlug") || '/moneyLeaderboard'; // TODO: required here?
     this.maxLoadCount = app.forum.attribute("leaderboardMaxLoadCount") || 50;
     this.initloadCount = app.forum.attribute("leaderboardInitLoadCount") || 20;
     this.loadMoreCount = app.forum.attribute("leaderboardLoadMoreCount") || 10;
