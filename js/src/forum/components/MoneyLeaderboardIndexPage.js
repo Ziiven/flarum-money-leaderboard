@@ -14,6 +14,7 @@ export default class MoneyLeaderboardIndexPage extends Page {
     this.moneyLeaderboardList = [];
     this.totalLoadCount = 0;
 
+    this.additionalInfo = app.forum.attribute("moneyLeaderBoardAdditionalInfo");
     this.maxLoadCount = app.forum.attribute("leaderboardMaxLoadCount") || 50;
     this.initloadCount = app.forum.attribute("leaderboardInitLoadCount") || 20;
     this.loadMoreCount = app.forum.attribute("leaderboardLoadMoreCount") || 10;
@@ -50,6 +51,10 @@ export default class MoneyLeaderboardIndexPage extends Page {
               <div class="MoneyLeaderboardListTitle">
                 {app.translator.trans("ziven-money-leaderboard.forum.leaderboard-list-title")}
               </div>
+
+              {this.additionalInfo && this.additionalInfo.length>0 && (
+                <p class="MoneyLeaderboardListAdditionalInformation">{this.additionalInfo}</p>
+              )}
 
               <div class="MoneyLeaderboardListHeader">
                 <div class="MoneyLeaderboardListHeaderRank">{app.translator.trans("ziven-money-leaderboard.forum.leaderboard-list-rank")}</div>
@@ -105,7 +110,7 @@ export default class MoneyLeaderboardIndexPage extends Page {
     [].push.apply(this.moneyLeaderboardList, results);
     this.loading = false;
     m.redraw();
-    
+
     return results;
   }
 
@@ -119,7 +124,7 @@ export default class MoneyLeaderboardIndexPage extends Page {
     if(this.maxLoadCount<this.totalLoadCount+loadCount){
       limit = this.maxLoadCount-this.totalLoadCount;
       this.totalLoadCount = this.maxLoadCount;
-    } 
+    }
 
     this.totalLoadCount+=loadCount;
 

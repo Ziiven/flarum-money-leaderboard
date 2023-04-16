@@ -5,7 +5,6 @@ import MoneyLeaderboardIndexPage from './components/MoneyLeaderboardIndexPage';
 
 app.initializers.add('ziven-money-leaderboard', () => {
   app.routes['moneyLeaderboard'] = {
-    path: '/moneyLeaderboard',
     component: MoneyLeaderboardIndexPage,
   };
 
