@@ -8,13 +8,9 @@ export default class MoneyLeaderboardListItem extends Component {
     const {leaderboardListItem,rankID} = this.attrs;
     const moneyName = app.forum.attribute('antoinefr-money.moneyname') || '[money]';
     const moneyValue = leaderboardListItem.attribute("money");
-    let moneyText = moneyName.replace('[money]', moneyValue);
+    const moneyText = app.forum.attribute('moneyLeaderBoardHideMoneyText') === "1"?moneyValue:moneyName.replace('[money]', moneyValue);
     let trophyClass = "MoneyLeaderboardListItemTrophyNone";
     let rankClass = "MoneyLeaderboardListItemRankTop";
-
-    if (app.forum.attribute('moneyLeaderBoardHideMoneyText') === "1") {
-      moneyText = moneyText.replace(/[^0-9\s]/g, '');
-    }
 
     if(rankID===1){
       trophyClass = "MoneyLeaderboardListItemTrophyGold";
