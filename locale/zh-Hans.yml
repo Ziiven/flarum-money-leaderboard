@@ -14,6 +14,10 @@ ziven-money-leaderboard:
       leaderboard-icon-help: 输入任意一个 Font Awesome 图标名称，包括前缀。
       leaderboard-entry-position: 排行榜入口位置
       leaderboard-entry-sideNav: 左侧导航菜单
+      leaderboard-hide-money-text: 隐藏社区币名称 # TODO: money name or money text?
+      leaderboard-additional-info: 排行榜描述信息
+      leaderboard-additional-info-help: 在排行榜上方展示的描述文字信息。可不填。
+      leaderboard-slug: Slug
       leaderboard-entry-topRightMenu: 右上角菜单
       leaderboard-max-load-count: 数据最多展示数量
       leaderboard-init-load-count: 初始数据的展示数量
