@@ -6,6 +6,7 @@ ziven-money-leaderboard:
     leaderboard-list-user: 用户
     leaderboard-list-money: 拥有资金
     leaderboard-load-more: 读取更多
+    leaderboard-list-empty: 这里空空如也
   admin:
     permission:
       allow_view_leaderboard: 允许浏览资金排行榜

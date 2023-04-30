@@ -6,6 +6,7 @@ ziven-money-leaderboard:
     leaderboard-list-user: User
     leaderboard-list-money: Money Owned
     leaderboard-load-more: Load More
+    leaderboard-list-empty: There is no content
   admin:
     permission:
       allow_view_leaderboard: Allow view leaderboard
